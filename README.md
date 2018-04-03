@@ -1,2 +1,3 @@
 # HTML5 
-## Proyectos quepeños peronallizado  listo para usar
+## Proyectos pequeños peronallizado con HTML y CSS  listo para usar
+
