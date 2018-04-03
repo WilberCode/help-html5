@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{ 
+        box-sizing: border-box;
+        } 
+        *,*::before,*::after{
+        box-sizing:inherit;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: #008E96;
+        }
+        .section{
+          position: absolute;
+          top: -5em;
+          left: -25px;
+         display: inline-block;
+         background-color: rgb(205, 226, 11);
+         padding: 25px;
+         transform:rotate(-8deg) skewX(-25deg); 
+         width:25em;
+         height: 10em;
+         box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-content{
+            position: absolute;
+
+     }
+     .title{
+         padding: 18px;
+         color: #ffffff;
+         font-size: 25px;
+     }
+     .container{
+         display: flex;
+     }
+     @media screen and (max-width: 400px){
+        .section{
+            width: 20em;
+        }
+        .title{
+            font-size: 20px;
+        }
+     }
+     .round{
+         position: absolute;
+         top: 50%;
+         left: -30px;
+         width: 14em;
+         height: 5em;
+         background-color: rgb(97, 223, 13);
+         border-radius: 50%;
+         box-shadow: 0 8px 2px 2px rgb(65, 155, 6);
+    }
+        </style>
+</head>
+<body>
+   <div class="container">
+        <section class="section"> 
+            </section> 
+            <section class="section-content">
+                <h3 class="title">Municipalida de Cheche</h3>
+         </section> 
+   </div>
+   <div class="round">
+
+   </div>
+</body>
+</html> 

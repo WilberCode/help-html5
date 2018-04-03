@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .gallery{
+            margin: auto;
+            margin-top: 9em;
+            width: 80%;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto 300px 400px;
+            grid-template-rows: 400px; 
+            background-color: rgb(240, 42, 42);
+        }
+        [class *= 'item-'] img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .item-1{
+            background-color: #6cc233;
+        }
+        .item-2{
+            perspective: 1000px;
+            background: url(https://quealucine.files.wordpress.com/2011/04/oso.jpg);
+            background-size: cover; 
+            position: relative;
+
+        }
+        .cover{
+            position: absolute;
+            width: 100%;
+            height: 100%;  
+            transform: rotateY(0);
+            transform-style: preserve-3d;
+            transform-origin: left;
+            transition: all .5s ease-in;
+        }
+        .item-2:hover .cover{
+            transform: rotateY(-180deg);
+        }
+        figure{
+            position: absolute;
+            display: block;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            z-index: 8;
+
+        }
+        figure.front{
+            background: url(http://decabo.com/blog/wp-content/uploads/2012/08/Brave-poster.jpg);
+            background-size: cover;
+            
+        }
+        figure.front::before{
+            left:.7em;
+            position: absolute;
+            content: '';
+            border-left: 1px solid rgb(139, 137, 137);
+            height: 100%;
+        }
+        figure.back{
+            background: url(http://www.cinesunstar.com/images/2017/10/03/_spmedia_thumbs/bladerunner_poster.jpg);
+            background-size: cover; 
+            transform: rotateY(180deg);
+        }
+        figure.back::after{ 
+            right: 0;
+            position: absolute;
+            content: '';
+            border-left: 1px solid rgb(139, 137, 137);
+            height: 100%;
+        }
+
+
+        /*other*/
+        .img-back{
+           width: 0;
+           transform: rotateY(-15deg);
+           opacity: 0;
+        } 
+        img:hover{
+          /*overflow:  width: 0;
+           transition: 2s;
+           transform: rotateY(100deg);*/
+            
+        }
+        .item-3{
+            background-color: #0f6da3;
+            display: flex;
+           
+        }
+        .item-3:hover .img-back{ 
+            background: rgb(143, 243, 28);
+            padding: 14px; 
+            width: 100%;
+            transition: 1s; 
+            transform: rotateX(0deg); 
+            opacity: 1;
+            
+
+        }
+        .item-3:hover img{
+            transition: 1s; 
+            width: 0;
+            transform:rotate3d() ;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="item-1 img-icon">
+            <img src="https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="item-2 img-icon">
+             <div class="cover">
+                 <figure class="front"></figure>
+                 <figure class="back"></figure>
+                </div>
+        </div>
+        <div class="item-3 img-icon">
+            <div class="img-back">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, eaque?</p>
+             </div>
+            <img src="https://images.pexels.com/photos/227674/pexels-photo-227674.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">            
+        </div>
+    </div>
+    <script>
+      (function(d){
+       let imgIcon  = d.querySelectorAll('.img-icon');
+       let icons = d.createElement('div');
+
+      })(document);
+
+    </script>
+</body>
+</html>
