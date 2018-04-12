@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family:sans-serif;
+        }
+        .radio{
+            display: block;
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            user-select: none; 
+        }
+        .radio input{ 
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          background-color: rgb(9, 133, 170);
+          border-radius: 50%;  
+        }
+         
+        .radio:hover input ~ .checkmark{
+            background-color: rgb(5, 85, 109);
+        }
+        .radio input:checked ~ .checkmark{ 
+            background-color: rgb(5, 85, 109);
+            box-shadow:0 0 0 2px #ffffff, 0 0 0 4px rgb(226, 211, 8);
+        }
+        .radio input:checked ~ .line-bg{ 
+            background-color: rgb(226, 211, 8);
+        }
+        .radio input:checked ~ .line{ 
+            box-shadow: none;
+        } 
+        .checkmark::before{
+            content: '';
+            position: absolute;
+            display: none;
+
+        }
+        .radio input:checked ~ .checkmark::before{
+            display: block;
+        }
+        .radio .checkmark::before{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color:rgb(226, 211, 8);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        } 
+        .radio .line-bg::before{ 
+            background-color:rgb(9, 133, 170); 
+
+        } 
+              
+
+
+
+
+    </style>
+</head>
+<body>
+    <label class="radio  "><input type="radio" checked="checked" name="cursos">Radio 1<span class="checkmark line"></span></label>
+    <label class="radio  "><input type="radio" name="cursos">Radio 2<span class="checkmark line"></span></label>
+    <label class="radio  "><input type="radio" name="cursos">Radio 3<span class="checkmark line"></span></label>
+    <label class="radio  "><input type="radio" name="cursos">Radio 4<span class="checkmark line"></span></label>
+    <label class="radio  "><input type="radio" name="cursos">Radio 5<span class="checkmark line"></span></label>
+    <hr>
+    <label class="radio"><input type="radio" checked="checked" name="cursos-l">Radio 1<span class="checkmark"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l">Radio 2<span class="checkmark"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l">Radio 3<span class="checkmark"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l">Radio 4<span class="checkmark"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l">Radio 5<span class="checkmark"></span></label>
+    <hr>
+    <label class="radio"><input type="radio" checked="checked" name="cursos-l-bg">Radio 1<span class="checkmark line-bg"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l-bg">Radio 2<span class="checkmark line-bg"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l-bg">Radio 3<span class="checkmark line-bg"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l-bg">Radio 4<span class="checkmark line-bg"></span></label>
+    <label class="radio"><input type="radio" name="cursos-l-bg">Radio 5<span class="checkmark line-bg"></span></label>
+</body>
+</html>

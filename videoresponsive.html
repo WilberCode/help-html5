@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        .box{
+            position: relative; 
+            background-color: rgb(13, 123, 187);
+            width: 50%;
+        }
+        .box::before{
+            content: '';
+            display: block;
+            padding-bottom: 56.32%;
+        }
+        iframe{
+            top: 0; 
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box">
+            <iframe src="https://www.youtube.com/embed/kdrYKlc-SIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
